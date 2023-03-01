@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<script src="./script.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" defer></script>
+
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Genshin Team Card</h1>
+            <div class="element-selection">
+                <ul id="ele">
+                    <li class="btn pyro-hover" data-filter="pyro">Pyro</li>
+                    <li class="btn cryo-hover" data-filter="cryo">Cryo</li>
+                    <li class="btn hydro-hover" data-filter="hydro">Hydro</li>
+                    <li class="btn anemo-hover" data-filter="anemo">Anemo</li>
+                    <li class="btn electro-hover" data-filter="electro">Electro</li>
+                    <li class="btn geo-hover" data-filter="geo">Geo</li>
+                </ul>
+            </div>
+        </div>
+        <div class="display-box">
+            <div class="wrapper">
+                <div class="char-selection char-item pyro" data-item="pyro">
+                    <ul class="counter">
+                        <li class="hutao pyro-hover" id="hutao">Hu Tao</li>
+                        <li class="xiangling pyro-hover" id="xiangling">Xiangling</li>
+                        <li class="diluc pyro-hover" id="diluc">Diluc</li>
+                        <li class="yoimiya pyro-hover" id="yoimiya">Yoimiya</li>
+                        <li class="bennett pyro-hover" id="bennett">Bennett</li>
+                        <li class="amber pyro-hover" id="amber">Amber</li>
+                        <li class="klee pyro-hover" id="klee">Klee</li>
+                        <li class="yanfei pyro-hover" id="yanfei">Yanfei</li>
+                        <li class="xinyan pyro-hover" id="xinyan">Xinyan</li>
+                        <li class="thoma pyro-hover" id="thoma">Thoma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="char-selection char-item hydro" data-item="hydro">
+                    <ul class="counter">
+                        <li class="ayato hydro-hover" id="ayato">Ayato</li>
+                        <li class="mona hydro-hover" id="mona">Mona</li>
+                        <li class="tartaglia hydro-hover" id="tartaglia">Tartaglia</li>
+                        <li class="kokomi hydro-hover" id="kokomi">Kokomi</li>
+                        <li class="yelan hydro-hover" id="yelan">Yelan</li>
+                        <li class="xingqiu hydro-hover" id="xingqiu">Xingqiu</li>
+                        <li class="barbara hydro-hover" id="barbara">Barbara</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="char-selection char-item electro" data-item="electro">
+                    <ul class="counter">
+                        <li class="beidou electro-hover" id="beidou">Beidou</li>
+                        <li class="fischl electro-hover" id="fischl">Fischl</li>
+                        <li class="keqing electro-hover" id="keqing">Keqing</li>
+                        <li class="shinobu electro-hover" id="shinobu">Kuki Shinobu</li>
+                        <li class="sara electro-hover" id="sara">Kujou Sara</li>
+                        <li class="lisa electro-hover" id="lisa">Lisa</li>
+                        <li class="razor electro-hover" id="razor">Razor</li>
+                        <li class="yae electro-hover" id="yae">Yae Miko</li>
+                        <li class="shogun electro-hover" id="shogun">Raiden Shogun</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="char-selection char-item anemo" data-item="anemo">
+                    <ul class="counter">
+                        <li class="venti anemo-hover" id="venti">Venti</li>
+                        <li class="kazuha anemo-hover" id="kazuha">Kazuha</li>
+                        <li class="jean anemo-hover" id="jean">Jean</li>
+                        <li class="xiao anemo-hover" id="xiao">Xiao</li>
+                        <li class="heizou anemo-hover" id="heizou">Heizou</li>
+                        <li class="sayu anemo-hover" id="sayu">Sayu</li>
+                        <li class="sucrose anemo-hover" id="sucrose">Sucrose</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="char-selection char-item cryo" data-item="cryo">
+                    <ul class="counter">
+                        <li class="ayaka cryo-hover" id="ayaka">Ayaka</li>
+                        <li class="ganyu cryo-hover" id="ganyu">Ganyu</li>
+                        <li class="eula cryo-hover" id="eula">Eula</li>
+                        <li class="shenhe cryo-hover" id="shenhe">Shenhe</li>
+                        <li class="qiqi cryo-hover" id="qiqi">Qiqi</li>
+                        <li class="aloy cryo-hover" id="aloy">Aloy</li>
+                        <li class="chongyun cryo-hover" id="chongyun">Chongyun</li>
+                        <li class="rosaria cryo-hover" id="rosaria">Rosaria</li>
+                        <li class="kaeya cryo-hover" id="kaeya">Kaeya</li>
+                        <li class="diona cryo-hover" id="diona">Diona</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="char-selection char-item geo" data-item="geo">
+                    <ul class="counter">
+                        <li class="zhongli geo-hover" id="zhongli">Zhongli</li>
+                        <li class="albedo geo-hover" id="albedo">Albedo</li>
+                        <li class="itto geo-hover" id="itto">Itto</li>
+                        <li class="ningguang geo-hover" id="ningguang">Ningguang</li>
+                        <li class="noelle geo-hover" id="noelle">Noelle</li>
+                        <li class="gorou geo-hover" id="gorou">Gorou</li>
+                        <li class="yunjin geo-hover" id="yunjin">Yun Jin</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="character-box" id="screenshot">
+            <div class="char-one char">
+                <img class="character-image"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=" ">
+                <img class="icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    alt=" ">
+                <h2></h2>
+            </div>
+            <div class="char-two char">
+                <img class="character-image"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=" ">
+                <img class="icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    alt=" ">
+                <h2></h2>
+            </div>
+            <div class="char-three char">
+                <img class="character-image"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=" ">
+                <img class="icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    alt=" ">
+                <h2></h2>
+            </div>
+            <div class="char-four char">
+                <img class="character-image"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=" ">
+                <img class="icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    alt=" ">
+                <h2></h2>
+            </div>
+        </div>
+        <div class="horizontal-button">
+            <button class="cross clear-one" onclick="ResetOne();">Clear One</button>
+            <button class="cross clear-all" onclick="ResetAll();">Reset Team</button>
+        </div>
+
+        <div class="screen">
+            <button id="download">SnapShot</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
